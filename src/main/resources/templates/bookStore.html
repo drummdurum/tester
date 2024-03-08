@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>boghandel Siden</title>
+</head>
+<body>
+    <h1> en bog tabel</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Navn</th>
+                <th>Genre</th>
+                <th>Pris</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="vare: ${vare}">
+                <td th:text="${vare.name}">
+                </td>
+                <td th:text="${vare.genre}">
+                </td>
+                <td th:text="${vare.price}">
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</body>
+</html>
